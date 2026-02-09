@@ -1,0 +1,18 @@
+# Environment variables (НИКОГДА не коммитим!)
+.env
+
+# Go
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
