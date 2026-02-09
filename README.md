@@ -1,106 +1,110 @@
-# 🌍 NumberLinguist Agent
+# 🌍 NumberLinguist - Teneo Protocol Educational Agent
 
-Educational agent that translates numbers (0-100) into 8 world languages!
+Educational agent that translates numbers (0-100) into 8 world languages.
 
-## 📋 NFT Details
-- **Token ID:** #735
-- **Contract:** 0xd8493cc411D5d0da58dd7d6C0A22baEA9fbb3e5
-- **Network:** Peaq Network
+## ✨ Features
+
+Translates numbers 0-100 into 8 languages:
+- 🇬🇧 English
+- 🇪🇸 Spanish  
+- 🇫🇷 French
+- 🇩🇪 German
+- 🇷🇺 Russian
+- 🇨🇳 Chinese (Mandarin)
+- 🇯🇵 Japanese
+- 🇸🇦 Arabic
+
+- ⚡ Instant responses (no AI latency)
+- 💰 Minimal pricing: 0.00001 USDC per request
+- 🔄 All fees return to owner
+
+## 🎮 Commands
+
+- `translate <number>` - Translate a number (0-100)
+- `random` - Get a random number translation
+- `help` - Show available commands
+
+## 📱 NFT Details
+
+- **NFT Token ID**: #735
+- **Contract**: 0xd8493cc411D5d0da58dd7d6C0A22baEA9fbb3e5
+- **Network**: PEAQ
+- **Owner**: 0xD1FC8C4b5Df3390ccb7669C2f401186F23a9C770
 
 ## 🚀 Quick Start
 
-### 1. Настройте .env файл
+### Prerequisites
 
+- Go 1.21+
+- PEAQ network access
+- Teneo Protocol Agent NFT
+
+### Installation
+
+1. Clone the repository:
 ```bash
-# Откройте .env и заполните:
-PRIVATE_KEY=ваш_приватный_ключ_без_0x
-NFT_TOKEN_ID=735
-OWNER_ADDRESS=0xВаш_Адрес_Кошелька
+git clone https://github.com/khunchan/number-linguist-agent.git
+cd number-linguist-agent
 ```
 
-### 2. Установите зависимости
-
+2. Install dependencies:
 ```bash
-go mod tidy
+go mod download
 ```
 
-### 3. Запустите агента
+3. Configure environment:
+```bash
+cp .env.example .env
+# Edit .env with your credentials
+```
 
+4. Run the agent:
 ```bash
 go run main.go
 ```
 
-Вы увидите:
+## ⚙️ Environment Variables
+```env
+PRIVATE_KEY=your_private_key_without_0x
+NFT_TOKEN_ID=735
+OWNER_ADDRESS=0xYourAddress
+RATE_LIMIT_PER_MINUTE=0
 ```
-🚀 NumberLinguist Agent Started!
-📚 Commands: translate <number>, random, help
-🌍 Supporting 8 world languages
-🔖 NFT Token ID: 735
-```
 
-## 💬 Использование в чате
+⚠️ **SECURITY**: Never commit your `.env` file with real private keys!
 
-Откройте [dashboard.teneo.pro](https://dashboard.teneo.pro) и используйте команды:
+## 🏗️ Architecture
 
+- **Language**: Go
+- **Framework**: Teneo Protocol Agent SDK
+- **Type**: Command-Based Agent
+- **Pricing**: Fixed rate (0.00001 USDC)
+- **Categories**: Education, Language Learning
+
+## 💬 Usage in Teneo Chatroom
 ```
 @NumberLinguist translate 42
 @NumberLinguist random
-@NumberLinguist 7
 @NumberLinguist help
 ```
 
-## 🎯 Для выполнения задания (100 запросов)
+## 🛠️ Development
 
-Просто отправляйте числа от 0 до 100:
+Built during Teneo Protocol Agent deployment on February 9, 2026.
 
-```
-@NumberLinguist 1
-@NumberLinguist 2
-@NumberLinguist 3
-... (до 100)
-```
+### Technical Decisions
 
-Или используйте команды:
-```
-@NumberLinguist translate 1
-@NumberLinguist translate 2
-@NumberLinguist random
-... (100 раз)
-```
+- No external APIs (instant responses)
+- Dictionary-based translations (reliable)
+- Composite number building (11-99 range)
+- Minimal dependencies
 
-## 🌍 Поддерживаемые языки
+## 📄 License
 
-1. English
-2. Spanish
-3. French
-4. German
-5. Russian
-6. Chinese
-7. Japanese
-8. Arabic
+MIT
 
-## 📚 Команды
+## 🔗 Links
 
-- `translate <number>` - Перевести число на 8 языков
-- `random` - Случайное число с переводом
-- `help` - Показать справку
-
-## ✅ Чеклист запуска
-
-- [ ] Заполнить .env (PRIVATE_KEY, OWNER_ADDRESS)
-- [ ] Убедиться что NFT_TOKEN_ID=735
-- [ ] Запустить `go mod tidy`
-- [ ] Запустить `go run main.go`
-- [ ] Проверить что агент онлайн
-- [ ] Протестировать команды в чате
-- [ ] Выполнить 100 запросов для награды
-
-## 💰 Награда
-
-После 100 запросов вы получите **300,000 баллов**!
-
-Каждый запрос стоит ~$0.00001, итого ~$0.001 за все 100.
-
----
-
-Built with [Teneo Agent SDK](https://github.com/TeneoProtocolAI/teneo-agent-sdk)
+- [Teneo Protocol](https://teneo-protocol.ai/)
+- [Agent Console](https://agent-console.ai/)
+- [Teneo SDK](https://github.com/TeneoProtocolAI/teneo-agent-sdk)
